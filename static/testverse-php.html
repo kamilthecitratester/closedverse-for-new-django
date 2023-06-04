@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="closedverse.css">
+<div id="wrapper"{% if not request.user.is_authenticated %} class="guest"{% endif %}>
+      <div id="sub-body">
+        <menu id="global-menu">
+          <li id="global-menu-logo"><h1><a href="/"><img src="{% static "img/menu-logo.png" %}" alt="Closedverse"></a></h1></li>
+		  {% if request.user.unique_id %}
+          <li id="global-menu-list">
+            <ul>
+              <li id="global-menu-mymenu"><a href="{% url "main:user-view" request.user.username %}"><span class="icon-container {% user_class request.user %}"><img src="{% avatar request.user %}" alt="User Page"></span><span>User Page</span></a></li>
+			  <li id="global-menu-feed"><a href="{% url "main:activity" %}" class="symbol"><span>Activity Feed</span></a></li>
+              <li id="global-menu-community"><a href="/" class="symbol"><span>Communities</span></a></li>
+			  <li id="global-menu-message"><a href="{% url "main:messages" %}" class="symbol"><span>Messages</span></a></li>
+			  <li id="global-menu-news"><a href="{% url "main:notifications" %}" class="symbol"></a></li>
+              <li id="global-menu-my-menu"><button class="symbol js-open-global-my-menu open-global-my-menu"></button>
+                <menu id="global-my-menu" class="invisible none">
+                  <li><a href="{% url "main:profile-settings" %}" class="symbol my-menu-profile-setting"><span>Profile settings</span></a></li>
+                  <li><a href="#" class="symbol my-menu-account-setting"><span>Account preferences</span></a></li>
+                  <li><a href="{% url "main:special-community-tag" "announcements" %}" class="symbol my-menu-openman"><span>Closedverse Announcements</span></a></li>
+                  <li><a href="{% url "main:special-community-tag" "changelog" %}" class="symbol my-menu-openman"><span>Closedverse Changelog</span></a></li>
+                  <li><a href="{% url "main:help-faq" %}" class="symbol my-menu-guide"><span>Frequently Asked Questions (FAQ)</span></a></li>
+				  <li><a href="{% url "main:help-rules" %}" class="symbol my-menu-guide"><span>Closedverse Rules</span></a></li>
+                  <li><a href="#" class="symbol my-menu-white-power"><span>Feedback/bug report</span></a></li>
+                  <li><a href="{% url "main:server-stat" %}" class="symbol my-menu-openman"><span>Server Statistics</span></a></li>
+				  <li>
+                   
