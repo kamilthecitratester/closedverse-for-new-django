@@ -1,0 +1,44 @@
+{% extends "closedverse_main/layout.html" %}
+{% block main-body %}{% load closedverse_user %}
+{% user_sidebar request user user.profile 0 True %}
+<div class="main-column" id="help">
+<div class="post-list-outline">
+    <h2 class="label">Closedverse Rules</h2>
+      <div class="help-content">
+        <p>Like any other site, there are rules to keep it from dying. So,</p>
+		
+		<h2>NSFW</h2>
+		<p>No NSFW for now, please.
+		<br>It's allowed in messages if the other person wants it though, and if admins are happy with un-public posts (like in your activity feed, spoilered), then it's fine as well.</p>
+		<h2>Gore</h2>
+		<p>Gore, however, is forbidden everywhere. Please do not.</p>
+		<h2>Illegal content</h2>
+		<p>Nobody has a problem reporting you to the authorities if you do share illegal content here, so please do not.</p>
+		<h2>Spam</h2>
+		<p>Please do not spam. This includes Yeahing lots of things, following lots of people, sending lots of messages, etc. Just do what's necessary.</p>
+		<h2>Hate speech</h2>
+		<p>The policy is that if you're being reasonable, it's fine. If you're obnoxious and unreasonable with all of it, you will be warned.</p>
+		<h2>Hacking</h2>
+		<p>If you're taking blind stabs at everything, consider <a href="https://github.com/ariankordi/closedverse">taking a look at the source</a>.
+		<br>Login attempts are logged. Please do not do anything bad.</p>
+		<h2>Public/joke accounts</h2>
+		<p>They are unpleasant and nobody likes them. Please do not. You will be warned if you make a joke account, and public accounts (as in, accounts that have the password posted) will just be deleted.</p>
+		<h2>Raids</h2>
+		<p>Raid accounts will be deleted as soon as they exist. <b>If you're raiding another site, please do not discuss it here</b>.</p>
+		<br>
+		<hr>
+		<h2>Repeals</h2>
+		<p>If you want to be unbanned, try talking to an admin. Any form of contact is supported, they just need to get your message and we'll see if you can be unbanned.
+		<br>This site was made by people who were mercilessly banned from many other sites without them accepting repeals, so we'll probably forgive you at some point.</p>
+		<h2>Begging for moderator status</h2>
+		<p>If you <i>only</i> beg for mod status and do nothing else on the service, you will probably be given a warning, if not a ban. Please do not.</p>
+		<h2>Age</h2>
+		<p>Age is a mostly just a number. However: the <i>"official"</i> minimum age is 13. If you're under 13 and you act immaturely, you will be warned.</p>
+		<br><hr>
+		<h2>Wow, this is way too strict. I am dissatisfied.</h2>
+		<p>I'm sorry if the rules appear too long or strict. This page has been re-done 2 times so far, and it has attempted to be simplistic, but it is not, and we have tried our hardest to make it appear as simple as possible.
+		<br>Chances are that if you aren't unpleasant, not all of these rules will be strictly enforced.</p>
+      </div>
+  </div>
+</div>
+{% endblock %}
